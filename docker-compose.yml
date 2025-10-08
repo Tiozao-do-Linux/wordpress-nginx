@@ -34,10 +34,13 @@ services:
   nginx:
     image: nginx:latest # Serviço Web Nginx
     ports:
-      - "80:80"
+      # - "8080:80"
+      - "8443:443"
     volumes:
       - ./wordpress:/var/www/html # Acesso aos arquivos do WordPress
       - ./custom-nginx.conf:/etc/nginx/conf.d/default.conf # Configurações do Nginx
+      - ./nginx.crt:/etc/nginx/ssl/nginx.crt
+      - ./nginx.key:/etc/nginx/ssl/nginx.key
     restart: unless-stopped
     depends_on:
       - wordpress
