@@ -17,10 +17,10 @@ De acordo com https://br.wordpress.org/download/ (em 09/Out/2025) as recomendaç
 
 Então vamos utilizar as imagens abaixo:
 
-** Banco de Dados: [mariadb:latest - versão 12](https://hub.docker.com/_/mariadb) - 
-** WordPress: [wordpress:fpm - versão 6.8.3 ](https://hub.docker.com/_/wordpress)
-** Servidor Web: [nginx:latest - versão 1.29.2](https://hub.docker.com/_/nginx) - 
-*** Porquê Nginx ao invés do Apache? Performance - https://www.hostinger.com/br/tutoriais/nginx-vs-apache
+* Banco de Dados: [mariadb:latest - versão 12](https://hub.docker.com/_/mariadb)
+* WordPress: [wordpress:fpm - versão 6.8.3 ](https://hub.docker.com/_/wordpress)
+* Servidor Web: [nginx:latest - versão 1.29.2](https://hub.docker.com/_/nginx) 
+* Porquê Nginx ao invés do Apache? Performance - https://www.hostinger.com/br/tutoriais/nginx-vs-apache
 
 # Obtendo o código
 
