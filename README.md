@@ -8,6 +8,7 @@ Iniciando em 28 de agosto de 2025, as maioria das imagens requerem subscrição 
 Essa decisão afetou diversos usuários que antes utilizavam as Imagens de forma livre.
 
 No caso do WordPress, as imagens **docker.io/bitnami/wordpress-nginx:latest** e **docker.io/bitnami/mariadb:latest** não estão mais disponíveis para serem utilizadas e nem receberão atualizações.
+* Nem adianta abrir uma issue relatando o problema causado https://github.com/bitnami/containers/issues/86874
 
 # Imagens Oficiais
 
