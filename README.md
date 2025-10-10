@@ -10,6 +10,7 @@ Essa decisão afetou diversos usuários que antes utilizavam as Imagens de forma
 
 No caso do WordPress, as imagens **docker.io/bitnami/wordpress-nginx:latest** e **docker.io/bitnami/mariadb:latest** não estão mais disponíveis para serem utilizadas e nem receberão atualizações.
 * Nem adianta abrir uma issue relatando o problema causado https://github.com/bitnami/containers/issues/86874
+* Ainda é possível utilizar **bitnami/wordpress:latest** - https://hub.docker.com/r/bitnami/wordpress. Mas até quando?
 
 # Imagens Oficiais
 
