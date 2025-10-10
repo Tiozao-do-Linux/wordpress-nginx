@@ -52,7 +52,7 @@ openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout nginx.key -out ngin
 
 ## Customizando com suas preferências
 
-* O arquivo [docker-compose.yml](docker-compose.yml) pode ser editado para refretir suas preferências (portas expostas, versão das imagens, etc). Quando em produção, remova a entrada do volume **info.php** que serve apenas para validar se as variáveis PHP foram aplicadas corretamente
+* O arquivo [docker-compose.yml](docker-compose.yml) pode ser editado para refretir suas preferências (portas expostas, versão das imagens, etc). Quando em produção, remova a entrada do volume **info.php** que serve apenas para validar se as variáveis PHP foram aplicadas corretamente. Optei por não comentar essa linha em meu ambiente de demonstrção, então veja https://wordpress.tiozaodolinux.com/info.php
 
 * O arquivo [custom-nginx.conf](custom-nginx.conf) contém as configurações básicas do servidor Nginx
 
