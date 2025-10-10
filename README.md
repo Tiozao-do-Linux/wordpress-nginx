@@ -29,29 +29,6 @@ cd wordpress-nginx
 docker compose up -d
 ```
 
-## Utilizando Certificados Digitais Auto-Assinados
-
-Para o funcionamento seguro é fundamental que o tráfego entre o Browser e o Servidor Nginx seja criptografado.
-
-Mesmo utilizando um **Self-Signed Certificate** não há como um **tcpdump** bisbilhoteiro **ler** o trafego.
-
-## Gerando Certificados Auto-Assinados
-
-Basta uma única linha de comando com o **openssl** para obter os arquivos de chave privada (**nginx.key**) e certificado (**nginx.crt**). Os arquivos nesse repositório foram gerados conforme abaixo:
-
-```bash
-openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout nginx.key -out nginx.crt -subj "/C=US/ST=State/L=City/O=Organization/CN=localhost"
-```
-* Fonte: https://ecostack.dev/posts/nginx-self-signed-https-docker-compose/
-
-## Customizando com suas preferências
-
-* O arquivo [docker-compose.yml](docker-compose.yml) pode ser editado para refretir suas preferências (portas expostas, versão das imagens, etc). Quando em produção, remova a entrada do volume **info.php** que serve apenas para validar se as variáveis PHP foram aplicadas corretamente. Optei por não comentar essa linha em meu ambiente de demonstrção, então veja https://wordpress.tiozaodolinux.com/info.php
-
-* O arquivo [custom-nginx.conf](custom-nginx.conf) contém as configurações básicas do servidor Nginx
-
-* O arquivo [custom-php.ini](custom-php.ini) contém as configurações de variáveis do PHP
-
 # Instalando e Configurando seu Wordpress
 
 Acesse https://localhost ou o FQDN (ex: https://wordpress.tiozaodolinux.com) do seu site.
@@ -85,3 +62,26 @@ Seguir as orientações conforme prints abaixo:
 * Visualiando o Conteúdo Inicial
 
 ![Tela-07](screenshots/Wordpress-Nginx-07.png)
+
+# Utilizando Certificados Digitais Auto-Assinados
+
+Para o funcionamento seguro é fundamental que o tráfego entre o Browser e o Servidor Nginx seja criptografado.
+
+Mesmo utilizando um **Self-Signed Certificate** não há como um **tcpdump** bisbilhoteiro **ler** o trafego.
+
+## Gerando Certificados Auto-Assinados
+
+Basta uma única linha de comando com o **openssl** para obter os arquivos de chave privada (**nginx.key**) e certificado (**nginx.crt**). Os arquivos nesse repositório foram gerados conforme abaixo:
+
+```bash
+openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout nginx.key -out nginx.crt -subj "/C=US/ST=State/L=City/O=Organization/CN=localhost"
+```
+* Fonte: https://ecostack.dev/posts/nginx-self-signed-https-docker-compose/
+
+# Customizando com suas preferências
+
+* O arquivo [docker-compose.yml](docker-compose.yml) pode ser editado para refretir suas preferências (portas expostas, versão das imagens, etc). Quando em produção, remova a entrada do volume **info.php** que serve apenas para validar se as variáveis PHP foram aplicadas corretamente. Optei por não comentar essa linha em meu ambiente de demonstrção, então veja https://wordpress.tiozaodolinux.com/info.php
+
+* O arquivo [custom-nginx.conf](custom-nginx.conf) contém as configurações básicas do servidor Nginx
+
+* O arquivo [custom-php.ini](custom-php.ini) contém as configurações de variáveis do PHP
