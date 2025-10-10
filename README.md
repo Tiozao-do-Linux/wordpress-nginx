@@ -14,9 +14,12 @@ No caso do WordPress, as imagens **docker.io/bitnami/wordpress-nginx:latest** e 
 
 # Imagens Oficiais
 
+* Quais são as [Docker "Official Image"](https://github.com/docker-library/official-images#what-are-official-images)
 * Como instanciar um WordPress do Zero em docker utilizando apenas imagens oficiais?
 
-De acordo com https://br.wordpress.org/download/ (em 09/Out/2025) as recomendações são: PHP 8.3 ou superior, versão do MySQL 8.0 ou a versão do MariaDB 10.6 ou superior.
+De acordo com https://br.wordpress.org/download/ (em 09/Out/2025) as recomendações são:
+* PHP 8.3 ou superior,
+* versão do MySQL 8.0 ou a versão do MariaDB 10.6 ou superior.
 
 Então vamos utilizar as imagens abaixo:
 
