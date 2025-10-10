@@ -35,31 +35,31 @@ Acesse https://localhost ou o FQDN (ex: https://wordpress.tiozaodolinux.com) do 
 
 Seguir as orientações conforme prints abaixo:
 
-* Alerta de conexão insegura
+## Alerta de conexão insegura
 
 ![Tela-01](screenshots/Wordpress-Nginx-01.png)
 
-* Aceitar os riscos
+## Aceitar os riscos
 
 ![Tela-02](screenshots/Wordpress-Nginx-02.png)
 
-* Escolha do Idioma
+## Escolha do Idioma
 
 ![Tela-03](screenshots/Wordpress-Nginx-03.png)
 
-* Preencher com suas informações
+## Preencher com suas informações
 
 ![Tela-04](screenshots/Wordpress-Nginx-04.png)
 
-* Instalação concluída
+## Instalação concluída
 
 ![Tela-05](screenshots/Wordpress-Nginx-05.png)
 
-* Login na Área Administrativa
+## Login na Área Administrativa
 
 ![Tela-06](screenshots/Wordpress-Nginx-06.png)
 
-* Visualiando o Conteúdo Inicial
+## Visualiando o Conteúdo Inicial
 
 ![Tela-07](screenshots/Wordpress-Nginx-07.png)
 
