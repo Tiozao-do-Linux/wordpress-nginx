@@ -4,6 +4,7 @@ Durante 18 anos, as [Imagens Bitnami](https://github.com/bitnami/containers) era
 
 Iniciando em 28 de agosto de 2025, as maioria das imagens requerem subscrição com a justificativa:
 * [Bitnami Secure Images Helps Keep Applications More Secure with Hardened Software Packages, Minimal CVEs, Support and Radical Transparency](https://news.broadcom.com/app-dev/broadcom-introduces-bitnami-secure-images-for-production-ready-containerized-applications)
+* NOTICE: Starting August 28th, 2025, only a limited subset of images/charts will remain available for free. Backup will be available for some time at the 'Bitnami Legacy' repository. More info at https://github.com/bitnami/containers/issues/83267
 
 Essa decisão afetou diversos usuários que antes utilizavam as Imagens de forma livre.
 
