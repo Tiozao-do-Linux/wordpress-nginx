@@ -1,18 +1,3 @@
-# Imagens Bitnami
-
-Durante 18 anos, as [Imagens Bitnami](https://github.com/bitnami/containers) eram livres para uso sem requerer subscrição/pagamento.
-
-Desde 28/Ago/2025 a maioria das imagens requerem subscrição. Se houve algum container rodando com imagens que foram afetadas, a mensagem é mostrada:
-* NOTICE: Starting August 28th, 2025, only a limited subset of images/charts will remain available for free. Backup will be available for some time at the 'Bitnami Legacy' repository. More info at https://github.com/bitnami/containers/issues/83267
-
-Essa decisão afetou diversos usuários que antes utilizavam as Imagens de forma livre.
-
-No caso do WordPress, a imagem que eu utilizava https://hub.docker.com/r/bitnami/wordpress-nginx não está mais disponível de forma gratuita
-* As últimas estão disponíveis em https://hub.docker.com/r/bitnamilegacy/wordpress-nginx
-* Você ainda pode utilizar as outras últimas do https://hub.docker.com/u/bitnamilegacy (mais sem atualização)
-* Nem adianta abrir uma issue relatando o problema causado https://github.com/bitnami/containers/issues/86874
-* Ainda é possível utilizar https://hub.docker.com/r/bitnami/wordpress. Mas até quando?
-
 # Imagens Oficiais
 
 * Quais são as [Docker "Official Image"](https://github.com/docker-library/official-images#what-are-official-images)
@@ -31,13 +16,19 @@ Então vamos utilizar as imagens abaixo:
   * Performance: - https://www.hostinger.com/br/tutoriais/nginx-vs-apache
   * Grandes sites: https://developer.wordpress.org/advanced-administration/server/web-server/nginx/
 
-# Obtendo o código
+# Obtendo o código e subindo a stack
 
-* Basta um **git clone** básico:
 ```bash
+# clonar o repositório
 git clone https://github.com/jarbelix/wordpress-nginx.git
+
+# entrar no diretório
 cd wordpress-nginx
+
+# subir o Stak (mais de um container simultâneo)
+docker compose up -d
 ```
+
 ## Utilizando Certificados Digitais Auto-Assinados
 
 Para o funcionamento seguro é fundamental que o tráfego entre o Browser e o Servidor Nginx seja criptografado.
@@ -53,7 +44,6 @@ openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout nginx.key -out ngin
 ```
 * Fonte: https://ecostack.dev/posts/nginx-self-signed-https-docker-compose/
 
-
 ## Customizando com suas preferências
 
 * O arquivo [docker-compose.yml](docker-compose.yml) pode ser editado para refretir suas preferências (portas expostas, versão das imagens, etc). Quando em produção, remova a entrada do volume **info.php** que serve apenas para validar se as variáveis PHP foram aplicadas corretamente. Optei por não comentar essa linha em meu ambiente de demonstrção, então veja https://wordpress.tiozaodolinux.com/info.php
@@ -61,11 +51,6 @@ openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout nginx.key -out ngin
 * O arquivo [custom-nginx.conf](custom-nginx.conf) contém as configurações básicas do servidor Nginx
 
 * O arquivo [custom-php.ini](custom-php.ini) contém as configurações de variáveis do PHP
-
-## Subir o Stak (mais de um container simultâneo)
-```bash
-docker compose up -d
-```
 
 # Instalando e Configurando seu Wordpress
 
