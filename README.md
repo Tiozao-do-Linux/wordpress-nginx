@@ -25,6 +25,9 @@ git clone https://github.com/jarbelix/wordpress-nginx.git
 # entrar no diretório
 cd wordpress-nginx
 
+# copiar env.example
+cp env.example .env
+
 # subir o Stak (mais de um container simultâneo)
 docker compose up -d
 ```
