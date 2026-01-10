@@ -34,7 +34,7 @@ services:
   nginx:
     image: nginx:latest # Serviço Web Nginx
     ports:
-      - "${HTTP_PORT}:80"
+      # - "${HTTP_PORT}:80"
       - "${HTTPS_PORT}:443"      
     volumes:
       - ./wordpress:/var/www/html # Acesso aos arquivos do WordPress
